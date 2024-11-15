@@ -1,0 +1,16 @@
+def sentiment_analysis():
+    positive_words = ["good", "happy", "great", "excellent", "love"]
+    negative_words = ["bad", "sad", "terrible", "hate", "awful"]
+
+    text = input("Enter a sentence: ").lower()
+    positive_count = sum(word in text for word in positive_words)
+    negative_count = sum(word in text for word in negative_words)
+
+    if positive_count > negative_count:
+        print("Sentiment: Positive")
+    elif negative_count > positive_count:
+        print("Sentiment: Negative")
+    else:
+        print("Sentiment: Neutral")
+
+sentiment_analysis()
